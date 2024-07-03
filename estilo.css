@@ -1,0 +1,56 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.principal{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 150px auto 150px;
+    grid-template-areas: 
+    "header" "header"
+    "section" "aside"
+    "footer" "footer";    
+}
+
+header {
+    grid-area: header;
+    background-color: brown;
+   
+}
+
+
+
+.conteudo{
+    grid-area: section;
+    background-color: pink;
+   height: 400px;
+   display: flex;
+   justify-content: space-between;
+  
+   
+   
+}
+
+aside{
+    grid-area: aside;
+    background-color: green;
+
+}
+
+/*
+.quadrado{
+    margin-top: 10px;
+    height: 200px;
+    width: 200px;
+    background-color: aqua;
+}
+*/
+
+footer{
+    background-color: rgb(115, 255, 0);
+    grid-area: footer;
+ 
+}
+
