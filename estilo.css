@@ -3,54 +3,79 @@
     margin: 0;
 }
 
-.principal{
+.principal {
     display: grid;
     width: 100%;
     grid-template-columns: 75% 25%;
     grid-template-rows: 150px auto 150px;
-    grid-template-areas: 
-    "header" "header"
-    "section" "aside"
-    "footer" "footer";    
+    grid-template-areas:
+        "header header"
+        "section aside"
+        "footer footer";
 }
 
 header {
     grid-area: header;
     background-color: brown;
-   
+
 }
 
 
 
-.conteudo{
+.conteudo {
     grid-area: section;
     background-color: pink;
-   height: 400px;
-   display: flex;
-   justify-content: space-between;
-  
-   
-   
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+
+
+
 }
 
-aside{
+aside {
     grid-area: aside;
     background-color: green;
 
 }
 
-/*
-.quadrado{
+
+.quadrado {
     margin-top: 10px;
     height: 200px;
     width: 200px;
     background-color: aqua;
+    gap: 10px;
 }
-*/
 
-footer{
+
+footer {
     background-color: rgb(115, 255, 0);
     grid-area: footer;
- 
+    height: auto;
 }
 
+
+@media screen and (max-width: 920px) {
+    .principal {
+        grid-template-columns: 100%;
+        grid-template-rows: 150px auto 150px;
+        grid-template-areas:
+            "header header"
+            "section section"
+            "aside aside"
+            "footer footer";
+    }
+
+    .quadrado {
+        margin-top: 10px;
+        height: 150px;
+        width: 150px;
+        background-color: aqua;
+        margin: 25px;
+    }
+
+    .conteudo{
+        flex-wrap: wrap;
+    }
+}
